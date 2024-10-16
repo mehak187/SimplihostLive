@@ -58,6 +58,7 @@ function CheckoutFeatures() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+    arrows: false,
     autoplaySpeed: 1500,
     responsive: [
       {
