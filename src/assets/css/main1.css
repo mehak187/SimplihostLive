@@ -2994,6 +2994,20 @@ tr {
    color: #FD6363;
  }
 
+ .featured-border:before {
+  position: absolute;
+  content: '';
+  background: #484848;
+  width: 60%;
+  height: 6px;
+  border-radius: 50px;
+  bottom: -14px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.featured-border {
+  color: #484848;
+}
 @media screen and (max-width: 1200px) {
   .filter-col {
     width: calc(33.33% - 12px);

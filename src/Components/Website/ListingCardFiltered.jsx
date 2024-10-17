@@ -26,7 +26,6 @@ const listings = [
     baths: 2,
     cars: 1,
     garage: 0,
-    detailImageSrc: Arrows,
   },
   {
     imageSrc: PCI,
@@ -39,7 +38,6 @@ const listings = [
     baths: 2,
     cars: 1,
     garage: 0,
-    detailImageSrc: Arrows,
   },
   {
     imageSrc: PCI,
@@ -52,7 +50,6 @@ const listings = [
     baths: 2,
     cars: 1,
     garage: 0,
-    detailImageSrc: Arrows,
   },
   {
     imageSrc: PCI,
@@ -65,45 +62,14 @@ const listings = [
     baths: 2,
     cars: 1,
     garage: 0,
-    detailImageSrc: Arrows,
   },
 ];
 
 const ListingCardFiltered = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    prevArrow: (
-      <div className="slider-arrow1 slider-prev">
-        <img src={Left} alt="left" className="ar-img shadow" />
-      </div>
-    ),
-    nextArrow: (
-      <div className="slider-arrow1 slider-next">
-        <img src={rightarrow} alt="right" className="ar-img shadow" />
-      </div>
-    ),
-    responsive: [
-    
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
   return (
-    <div className="slides">
-      <Slider {...settings}>
+    <div className="row">
         {listings.map((listing, index) => (
-          <div className="col-12 mt-4 mx-auto px-sm-4 px-2 py-5" key={index}>
+          <div className="col-12 col-lg-6 mt-4 mx-auto px-sm-4 px-2 py-5" key={index}>
             <div className="p-3 furnished-shadow rounded-3">
               <div className="furnished-siz">
                 <img src={listing.imageSrc} alt="furnished" className="w-100" />
@@ -135,9 +101,9 @@ const ListingCardFiltered = () => {
                     <div className="furniture-size">
                       <img src={bedimg} alt="bed" className="sm-img" />
                     </div>
-                    <p className="mb-0 fw-bold ms-2">{listing.beds}</p>
+                    <p className="mb-0 fw-bold ms-1">{listing.beds}</p>
                   </div>
-                  <div className="d-flex align-items-center ms-1">
+                  <div className="d-flex align-items-center ms-2">
                     <div className="furniture-size">
                       <img
                         src={furniture2img}
@@ -145,15 +111,15 @@ const ListingCardFiltered = () => {
                         className="sm-img"
                       />
                     </div>
-                    <p className="mb-0 fw-bold ms-2">{listing.baths}</p>
+                    <p className="mb-0 fw-bold ms-1">{listing.baths}</p>
                   </div>
-                  <div className="d-flex align-items-center ms-1">
+                  <div className="d-flex align-items-center ms-2">
                     <div className="furniture-size">
                       <img src={carimg} alt="car" className="sm-img" />
                     </div>
                     <p className="mb-0 fw-bold ms-2">{listing.cars}</p>
                   </div>
-                  <div className="d-flex align-items-center ms-1">
+                  <div className="d-flex align-items-center ms-2">
                     <div className="furniture-size">
                       <img
                         src={furniture4}
@@ -161,7 +127,7 @@ const ListingCardFiltered = () => {
                         className="sm-img"
                       />
                     </div>
-                    <p className="mb-0 fw-bold ms-2">{listing.garage}</p>
+                    <p className="mb-0 fw-bold ms-1">{listing.garage}</p>
                   </div>
                 </div>
                 <Link
@@ -170,7 +136,7 @@ const ListingCardFiltered = () => {
                 >
                   Detail
                   <img
-                    src={listing.detailImageSrc}
+                    src={Arrows}
                     alt="detail"
                     className="ms-2"
                   />
@@ -179,7 +145,6 @@ const ListingCardFiltered = () => {
             </div>
           </div>
         ))}
-      </Slider>
     </div>
   );
 };

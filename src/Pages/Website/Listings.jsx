@@ -95,7 +95,7 @@ function Listings() {
       <section className="listing-feature py-5">
         <div className="container">
           <div className="text-center">
-            <h2 className="black-color fw-bold position-relative featured-border">
+            <h2 className="fw-bold position-relative featured-border d-inline-block">
               Featured Properties
             </h2>
           </div>
