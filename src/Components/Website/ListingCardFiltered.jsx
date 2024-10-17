@@ -69,7 +69,7 @@ const ListingCardFiltered = () => {
   return (
     <div className="row">
         {listings.map((listing, index) => (
-          <div className="col-12 col-lg-6 mt-4 mx-auto px-sm-4 px-2 py-5" key={index}>
+          <div className="col-12 col-md-6 mt-4 mx-auto px-3 px-2 py-2" key={index}>
             <div className="p-3 furnished-shadow rounded-3">
               <div className="furnished-siz">
                 <img src={listing.imageSrc} alt="furnished" className="w-100" />
@@ -77,17 +77,17 @@ const ListingCardFiltered = () => {
               <Link to="#" className="furnishedover-size">
                 <FaRegHeart className=" text-black"/>
               </Link>
-              <div className="d-flex align-items-center mt-3">
-                <div className="furnished-flower">
+              <div className="d-flex justify-content-center justify-content-sm-start align-items-center mt-3">
+                <div className="furnished-flower d-none d-sm-block">
                   <img
                     src={listing.flowerSrc}
                     alt="furnished-flower"
                     className="w-100"
                   />
                 </div>
-                <p className="mb-0 fs-6 fw-bold ms-2">{listing.title}</p>
+                <p className="mb-0 fs-6 text-center text-sm-start fw-bold ms-2">{listing.title}</p>
               </div>
-              <div className="d-flex align-items-center mt-3">
+              <div className="d-flex justify-content-center justify-content-sm-start align-items-center mt-3">
                 <div className="">
                   <img src={locationimg} alt="location" className="w-100" />
                 </div>
@@ -95,7 +95,7 @@ const ListingCardFiltered = () => {
                   {listing.location}
                 </p>
               </div>
-              <div className="d-flex justify-content-between mt-3">
+              <div className="d-flex flex-column flex-sm-row align-items-center justify-content-between mt-3">
                 <div className="d-flex align-items-center">
                   <div className="d-flex align-items-center">
                     <div className="furniture-size">
@@ -131,8 +131,8 @@ const ListingCardFiltered = () => {
                   </div>
                 </div>
                 <Link
-                  to=""
-                  className="detail-btn text-white d-inline-flex align-items-center text-decoration-none"
+                  to="/listing-details"
+                  className="detail-btn mt-3 mt-sm-0 text-white d-inline-flex align-items-center text-decoration-none"
                 >
                   Detail
                   <img
