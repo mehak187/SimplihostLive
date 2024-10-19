@@ -65,6 +65,8 @@ const ListingCard = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
     prevArrow: (
       <div className="slider-arrow1 slider-prev">
         <img src={Left} alt="left" className="ar-img shadow" />
@@ -118,7 +120,7 @@ const ListingCard = () => {
     <div className="slides">
       <Slider {...settingsOuter}>
         {listings.map((listing, index) => (
-          <div className="col-12 mt-4 mx-auto px-sm-4 px-2 py-5" key={index}>
+          <div className="col-12 mt-md-4 mx-auto px-sm-4 px-2 py-5" key={index}>
             <div className="p-3 furnished-shadow inner-slider position-relative rounded-3">
               <Slider {...settingsInner}>
                 {listing.imageSrcs.map((src, idx) => (
@@ -130,7 +132,7 @@ const ListingCard = () => {
                   />
                 ))}
               </Slider>
-              
+
               <Link to="#" className="furnishedover-size">
                 <FaRegHeart className=" text-black" />
               </Link>
@@ -192,11 +194,7 @@ const ListingCard = () => {
                   className="detail-btn mt-3 mt-md-0 text-white d-inline-flex align-items-center text-decoration-none"
                 >
                   Detail
-                  <img
-                    src={Arrows}
-                    alt="detail"
-                    className="ms-2"
-                  />
+                  <img src={Arrows} alt="detail" className="ms-2" />
                 </Link>
               </div>
             </div>

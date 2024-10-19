@@ -31,7 +31,7 @@ function Listings() {
         </div>
         <div className="container-fluid">
           <div className="mt-5">
-           <SearchFilter />
+            <SearchFilter />
           </div>
         </div>
       </section>
@@ -92,7 +92,7 @@ function Listings() {
           </div>
         </div>
       </section>
-      <section className="listing-feature py-5">
+      <section className="listing-feature py-4 py-lg-5">
         <div className="container">
           <div className="text-center">
             <h2 className="fw-bold position-relative featured-border d-inline-block">

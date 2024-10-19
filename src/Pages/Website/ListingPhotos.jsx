@@ -5,6 +5,8 @@ import appartment2 from "../../assets/img/apartment2.svg";
 import appartment3 from "../../assets/img/apartment3.svg";
 import appartment5 from "../../assets/img/apartment5.svg";
 import apartmentStair from "../../assets/img/apartment-stair.svg";
+import { FaRegHeart } from "react-icons/fa";
+import { FaShareAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function ListingPhotos() {
@@ -73,18 +75,26 @@ function ListingPhotos() {
 
   return (
     <div>
-      <section className="appartment-bg p-4">
-        <div className="d-sm-flex d-row justify-content-between align-items-center">
-          <div className="d-flex align-items-center">
-            <Link to="/listing-details"><img src={appartmentArrow} alt="arrow" /></Link>
-            <div className="ms-3">
-              <p className="mb-0 fw-bold fs-5">Well Furnished Apartment</p>
-              <p className="mb-0 light-black">100 Smart Street, LA, USA</p>
+      <section className="appartment-bg py-4">
+        <div className="container">
+          <div className="d-sm-flex d-row justify-content-between align-items-center">
+            <div className="d-flex align-items-center">
+              <Link to="/listing-details">
+                <img src={appartmentArrow} alt="arrow" />
+              </Link>
+              <div className="ms-3">
+                <p className="mb-0 fw-bold fs-5">Well Furnished Apartment</p>
+                <p className="mb-0 light-black">100 Smart Street, LA, USA</p>
+              </div>
             </div>
-          </div>
-          <div className="mt-4 mt-sm-0">
-            <i className="fa-regular fa-heart fa-size"></i>
-            <i className="fa-solid fa-share-nodes fa-size ms-2"></i>
+            <div className="mt-4 mt-sm-0">
+              <Link to="">
+                <FaRegHeart className="me-3 fs-4 text-black" />
+              </Link>
+              <Link to="">
+                <FaShareAlt className="fs-4 text-black" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

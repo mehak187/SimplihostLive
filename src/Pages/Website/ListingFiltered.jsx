@@ -1,6 +1,6 @@
-import React from 'react';
-import ListingCardFiltered from '../../Components/Website/ListingCardFiltered';
-import SearchFilter from '../../Components/Website/SearchFilter';
+import React from "react";
+import ListingCardFiltered from "../../Components/Website/ListingCardFiltered";
+import SearchFilter from "../../Components/Website/SearchFilter";
 
 function ListingFiltered() {
   return (
@@ -8,16 +8,16 @@ function ListingFiltered() {
       <section className="listing-color py-5">
         <div className="container">
           <div className="">
-           <SearchFilter />
+            <SearchFilter />
           </div>
         </div>
       </section>
       <section>
         <div className="container">
-          <div className="row">
-            <p className="mb-0 blue-color fw-semi mt-3">35 places in Lake City</p>
+          <div className="row py-3">
+            <p className="mb-0 blue-color fw-semi">35 places in Lake City</p>
             <div className="col-xl-8 col-xxl-7">
-                <ListingCardFiltered />
+              <ListingCardFiltered />
             </div>
             <div className="col-xl-4 col-xxl-5">
               <div className="myy-shadow p-2 mt-4">

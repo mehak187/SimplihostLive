@@ -82,10 +82,10 @@ function HouseRules() {
                   </h6>
                 </div>
                 <div className="d-flex align-items-center">
-                  <button className="bg-transparent border-0">
+                  <button type="button" className="bg-transparent border-0">
                     <CiCircleCheck className="fs-3 text-muted" />
                   </button>
-                  <button className="bg-transparent border-0">
+                  <button type="button" className="bg-transparent border-0">
                     <IoIosCloseCircleOutline className="fs-3 text-muted ms-4" />
                   </button>
                 </div>
@@ -112,6 +112,7 @@ const RoomCounter = ({ label, count, setCount }) => {
       <span className="room-counter-label">{label}</span>
       <div className="room-counter-wrapper">
         <button
+          type="button"
           className="room-counter-button"
           onClick={() => modifyCount(false)}
         >
@@ -119,6 +120,7 @@ const RoomCounter = ({ label, count, setCount }) => {
         </button>
         <span className="room-counter-count">{count}</span>
         <button
+          type="button"
           className="room-counter-button"
           onClick={() => modifyCount(true)}
         >
